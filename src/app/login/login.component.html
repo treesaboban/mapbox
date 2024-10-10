@@ -1,0 +1,53 @@
+
+  <div class="card mt-4" style="width: 18rem;left: 30rem;">
+    <div class="card-body">
+      <h5 class="card-title text-center">Login Here</h5>
+      @if(showLoader){
+        <div class="loader">
+          <span class="loader-text">loading</span>
+            <span class="load"></span>
+        </div>
+      }
+      @if(!userFormSubmitted && txtMsg.length) {
+        <div class="text-danger">
+      <div class="error">
+        {{txtMsg}}
+      </div>
+    </div>
+    }
+      <div class="mt-5">
+        <form [formGroup]="signInForm">
+          <div class="form-floating mb-3">
+            <input type="email" formControlName="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Email address</label>
+          </div>
+          <!-- signInForm.controls.email.touched  -->
+          @if(userFormSubmitted && signInForm.controls.email.errors?.['required']) {
+              <div class="text-danger">
+            <div class="error">
+              * email is required
+            </div>
+          </div>
+          }
+  
+          <div class="form-floating">
+            <input type="password" formControlName="password" class="form-control" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Password</label>
+          </div> 
+  
+          @if(userFormSubmitted && signInForm.controls.password.errors?.['required']) {
+            <div class="text-danger">
+          <div class="error">
+            * password is required
+          </div>
+        </div>
+        }
+  
+        </form>
+      </div>
+      <div class="m-4">
+        <button type="button" class="btn btn-warning" (click)="reset()">Reset</button>
+      <button type="button" class="btn btn-primary ms-3" (click)="login()">Login</button>
+      </div>
+    </div>
+  </div>

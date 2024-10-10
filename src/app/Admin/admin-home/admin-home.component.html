@@ -1,0 +1,103 @@
+<!-- <p>admin-home works!</p>
+@for(user of users();track $index){
+    <div>{{user.name}}</div>
+}
+@empty {
+     <div>we dont have anything</div>
+}
+
+@if(user.role === 'developer') {
+<div>developer</div>
+}
+@else if(user.role === 'admin') {
+    <div>admin</div>
+}
+@else {
+    <div>QA</div>
+}
+
+@switch(user.role) {
+    @case('developer') {
+        <div>developer</div>
+    }
+    @case('admin') {
+        <div>admin</div>
+    }
+    @case('qa') {
+        <div>qa</div>
+    }
+}
+
+@defer {
+    <div>Defer</div>
+  }
+  @loading (after 2s; minimum 5s) {
+    <div>Loading..</div>
+  }
+  @placeholder (minimum 1s) {
+    <div>Placeholder</div>
+  }
+  @error {
+    <div>Error</div>
+  }
+
+  @defer (on viewport) {
+    <div>Defer</div>
+  }
+  @placeholder {
+    <div>Placeholder</div>
+  } -->
+
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 m-4">
+        <!-- add  -->
+      <div class="col">
+        <div class="card shadow-sm">
+            <img src="https://blog.hubspot.com/hubfs/sales-environment.jpg" alt="add-image">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" 
+                data-bs-target="#exampleModal" (click)="addUserPopup=true;">ADD</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- view  -->
+      <div class="col">
+        <div class="card shadow-sm">
+            <img src="https://th.bing.com/th/id/OIP.mBH8dpEr1fMkHIAr7jF-fAAAAA?rs=1&pid=ImgDetMain" alt="view-image">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary" (click)="viewUserPopup();">VIEW</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- edit  -->
+      <!-- <div class="col">
+        <div class="card shadow-sm">
+          <img src="https://img.freepik.com/premium-vector/user-interface-flat-illustration-download_203633-10688.jpg" alt="edit-image">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" 
+                data-bs-target="#exampleModal1"
+                (click)="editUserPopup=true;">EDIT</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </div>
+  @if(addUserPopup) {
+    <app-add-user [showPopup]="addUserPopup"   (closePopup)="addUserPopup = false;"></app-add-user>    
+  }
+ 
+ 
+  <!-- <app-view-user></app-view-user> -->
+

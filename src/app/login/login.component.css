@@ -1,0 +1,10 @@
+.card {
+    width: 490px;
+    height: 350px;
+    border: 0px 2px;
+    box-shadow: 2px 0px 4px rgb(169, 176, 245);
+  }
+
+  button {
+    max-width: 600px;
+  }

@@ -1,0 +1,40 @@
+
+<div class="card m-5" style="width: 20rem;left: 400px;" id="outer">
+    @if(enableEdit){
+    <div class="card-body">
+        <form [formGroup]="editForm">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"><input type="text" formControlName="userName"></li>
+            <li class="list-group-item"><input type="text" formControlName="email"></li>
+            <li class="list-group-item"><input type="text" formControlName="phone"></li>
+            <li class="list-group-item"><input type="text" formControlName="password"></li>
+        </ul>
+        </form>
+        @if(showLoader){
+            <div class="loader">
+              <span class="loader-text">loading</span>
+                <span class="load"></span>
+            </div>
+          }
+    </div>
+    <button class="btn btn-warning ms-5" (click)="editProfile(false)">Update</button>
+}
+@else {
+<div class="card-body">
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">USER NAME : {{user.userName}}</li>
+        <li class="list-group-item">EMAIL : {{user.email}}</li>
+        <li class="list-group-item">PHONE : {{user.phone}}</li>
+        <li class="list-group-item">PASSWORD : {{user.password}}</li>
+    </ul>
+    <!-- @if(showLoader){
+        <div class="loader">
+          <span class="loader-text">loading</span>
+            <span class="load"></span>
+        </div>
+      } -->
+</div>
+<button class="btn btn-warning inner" (click)="editProfile(true)">Update Your Profile</button>
+<button class="btn btn-warning inner" (click)="goBack()">Back</button>
+}
+</div>

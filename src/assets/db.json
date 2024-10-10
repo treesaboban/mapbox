@@ -1,0 +1,40 @@
+{
+  "Users": [
+    {
+      "id": "10100",
+      "userName": "admin",
+      "phone": "9020134050",
+      "email": "admin@gmail.com",
+      "role": "admin",
+      "password": "admin@12",
+      "status": "1"
+    },
+    {
+      "id": "52154",
+      "userName": "Rudy m",
+      "phone": "890908910",
+      "email": "rudym@gmail.com",
+      "role": "user",
+      "password": "nwyY8_bi",
+      "status": "1"
+    },
+    {
+      "id": "30251",
+      "userName": "tom",
+      "phone": "8848",
+      "email": "tom@gmail.com",
+      "role": "user",
+      "password": "ReMxvl@@",
+      "status": "1"
+    },
+    {
+      "id": "26376",
+      "userName": "nevin@gmail.com",
+      "phone": "1234",
+      "email": "nevin@gmail.com",
+      "role": "user",
+      "password": "dyb_&c2|",
+      "status": "1"
+    }
+  ]
+}

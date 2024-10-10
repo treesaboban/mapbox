@@ -1,0 +1,52 @@
+img {
+    height: 300px;
+}
+.btn {
+    padding: 10px 20px;
+    border: 1px solid #b674c7;
+    background-color: #8f6bf3;
+    color: #ffffff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 10px 20px;
+    transition: all 0.4s ease;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+    left: 128px;
+  }
+  
+  .btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.25) 0%,
+      rgba(255, 255, 255, 0) 70%
+    );
+    transform: scale(0);
+    transition: transform 0.5s ease;
+  }
+  
+  .btn:hover::after {
+    transform: scale(4);
+  }
+  
+  .btn:hover {
+    border-color: #d858f8;
+    background: #9775f5;
+  }
+  
+  .card:hover {
+    transform: scale(1.02) perspective(0px);
+    box-shadow: 0 10px 10px rgba(255,0,0,.7);  
+}
+
+.card {
+    transition: transform .5s, box-shadow 1s;
+  }

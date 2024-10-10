@@ -1,0 +1,44 @@
+
+<!-- Modal -->
+@if(showPopup){
+  <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="display: block;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Add User</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="closePopupAdd()"></button>
+        </div>
+        <div class="modal-body">
+          <form  [formGroup]="addCustomerForm">
+            <!-- name  -->
+            <div class="form-floating mb-3">
+              <input type="text" formControlName="userName" class="form-control" id="floatingInput" placeholder="name@example.com">
+              <label for="floatingInput">Name</label>
+            </div>
+            <!-- phone  -->
+            <div class="form-floating mb-3">
+              <input type="text" formControlName="phone" class="form-control" id="floatingInput" placeholder="name@example.com">
+              <label for="floatingInput">Phone</label>
+            </div>
+             <!-- email  -->
+             <div class="form-floating mb-3">
+              <input type="email" formControlName="email" class="form-control" id="floatingPassword" placeholder="name@example.com">
+              <label for="floatingPassword">Email</label>
+            </div>
+             <!-- password  -->
+            <!-- <div class="form-floating mb-3">
+              <input type="password" formControlName="password" class="form-control" id="floatingPassword" placeholder="Password">
+              <label for="floatingPassword">Password</label>
+            </div> -->
+    
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn close" data-bs-dismiss="modal" (click)="closePopupAdd()">Close</button>
+          <button type="button" class="btn" (click)="addCustomers()">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+}
+<!-- <div class="modal-backdrop fade"  [class.show]="showPopup"></div> -->

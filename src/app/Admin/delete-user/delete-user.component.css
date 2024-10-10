@@ -1,0 +1,33 @@
+.btn {
+    padding: 5px;
+    border: 1px solid #881304;
+    background-color: #d40909;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-family:sans-serif;
+    font-style: italic;
+    cursor: pointer;
+  }
+
+  .btn.close{
+    padding: 5px;
+    border: 1px solid #075594;
+    background-color: #053dd6;
+    color: #ffffff;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+
+ 
+  .btn.close:hover {
+    border-color: #1fd3eb;
+    background: #846bf7;
+  }
+
+  .btn:hover {
+    border-color: #582902;
+    background: #f33e1e;
+  }
+  .modal-backdrop {
+    --bs-backdrop-bg: #FFFF;
+  }

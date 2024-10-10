@@ -1,0 +1,9 @@
+
+.hide {
+    display: none;
+  }
+      
+  .example-icon:hover + .hide {
+    display: block;
+    color: red;
+  }

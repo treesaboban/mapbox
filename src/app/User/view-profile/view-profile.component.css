@@ -1,0 +1,24 @@
+.card {
+    height: 350px;
+    box-shadow: 2px 0px 8px grey;
+}
+.card .btn{
+    width: 20rem;
+}
+.btn {
+    padding: 2px 5px;
+    /* position: relative; */
+    overflow: hidden;
+    font-weight: bold;
+    /* left: 38px; */
+    /* bottom: 8px; */
+  }
+  #outer
+{
+    width:100%;
+    text-align: center;
+}
+.inner
+{
+    display: inline-block;
+}
