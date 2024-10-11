@@ -31,7 +31,6 @@ export class MapCommonComponent implements OnInit {
       defaultMode: 'draw_polygon',
     });
   }
-
   ngOnInit(): void {
     mapboxgl.accessToken =
       'pk.eyJ1IjoidHJlYXNhYm9iYW4iLCJhIjoiY2x5em56dXA5Mmo0ZzJrcHU2ejd3azkzeiJ9._tFcEoRrGm2ou7FeyTsh-g';
