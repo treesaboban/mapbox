@@ -31,6 +31,7 @@ export class MapCommonComponent implements OnInit {
       defaultMode: 'draw_polygon',
     });
   }
+
   ngOnInit(): void {
     mapboxgl.accessToken =
       'pk.eyJ1IjoidHJlYXNhYm9iYW4iLCJhIjoiY2x5em56dXA5Mmo0ZzJrcHU2ejd3azkzeiJ9._tFcEoRrGm2ou7FeyTsh-g';
@@ -74,7 +75,6 @@ export class MapCommonComponent implements OnInit {
     // Calculate the fourth coordinate for a rectangle
     const x4 = x1 + (x3 - x2);
     const y4 = y1 + (y3 - y2);
-    
     return [x4, y4];
 }
 
@@ -121,8 +121,8 @@ plotPolygon(coordinates: number[][]) {
       source: 'polygon',
       layout: {},
       paint: {
-          'line-color': '#cceeff',
-          'line-width': 1,
+          'line-color': '#20a6e8',
+          'line-width': 2,
       },
   });
 
@@ -160,23 +160,24 @@ calculateCentroid = (coords: [number, number][]) => {
   return [xSum / n, ySum / n];
 };
 
-// Draw grid lines and add text to cells
 drawGridLines(coordinates: number[][]) {
   const polygonBounds = this.getPolygonBounds(coordinates);
   const numRows = this.plotdata[0].nRows;
   const numCols = this.plotdata[0].nRngs;
+  // const numRows = this.maxRows;
+  // const numCols = this.maxRows;  // Assuming square grid, you can change this if needed.
 
   const xStep = (polygonBounds.maxX - polygonBounds.minX) / numCols;
   const yStep = (polygonBounds.maxY - polygonBounds.minY) / numRows;
-  // Store cell centers and boundaries for later use
+  // Store cell centers for later use
   const cellCenters = [] as any;
   const cellBoundaries = [] as any;
-  for (let i = 0; i < numRows; i++) {
+  for (let i = 1; i < numRows; i++) {
     const y = polygonBounds.minY + i * yStep;
-    for (let j = 0; j < numCols; j++) {
+    for (let j = 1; j < numCols; j++) {
       const x = polygonBounds.minX + j * xStep;
-      const centerX = x + xStep / 2;
-      const centerY = y + yStep / 2;
+      const centerX = x - xStep / 2;
+      const centerY = y - yStep / 2;
       cellCenters.push([centerX, centerY]);
       cellBoundaries.push([
         [x, y],
@@ -207,12 +208,10 @@ drawGridLines(coordinates: number[][]) {
     ];
     this.drawLine(lineCoords, `vertical-line-${i}`);
   }
-
   // Add text to specific cells on zooming
-  this.addTextToCells(cellCenters, cellBoundaries, coordinates as any); // Add text to cells
+    this.addTextToCells(cellCenters, cellBoundaries, coordinates as any); // Add text to cells
 }
-
-// Adding text to cells
+// adding text to cells
 addTextToCells(cellCenters: [number, number][], cellBoundaries: [number, number][][], polygonCoordinates: [number, number][]) {
   const texts = this.plotdata[0].plotinfo; // Your text for each cell
   let trialId: string;
@@ -224,21 +223,21 @@ addTextToCells(cellCenters: [number, number][], cellBoundaries: [number, number]
     }
   }
   texts.forEach((text, index) => {
-    if (index < cellCenters.length) {
-      const [x, y] = cellCenters[index]; // Destructuring the tuple
-      this.addTextToMap(x, y, text.id, `text-${index}`, trialId, polygonCoordinates); // Add text to the map
-      this.highlightCell(cellBoundaries[index], `highlight-${index}`); // Highlight the cell
-    }
-  });
+      if (index < cellCenters.length) {
+        const [x, y] = cellCenters[index]; // Destructuring the tuple
+        this.addTextToMap(x, y, text.id, `text-${index}`, trialId, polygonCoordinates); // Add text to the map
+        this.highlightCell(cellBoundaries[index], `highlight-${index}`); // Highlight the cell
+      }
+    });
 }
 
-// Adding text cells to map
+// adding text cells to map
 addTextToMap(x: number, y: number, text: string, textId: string, headingText: string, polygonCoordinates: [number, number][]) {
-  // Calculate the centroid of the polygon
-  const [centroidX, centroidY] = this.calculateCentroid(polygonCoordinates);
+   // Calculate the centroid of the polygon
+   const [centroidX, centroidY] = this.calculateCentroid(polygonCoordinates);
 
   // Check if the source already exists
-  const existingSource = this.map?.getSource(textId);
+  const existingSource = this.map!.getSource(textId);
   if (existingSource && 'setData' in existingSource) {
     // Update the existing source
     existingSource.setData({
@@ -251,9 +250,10 @@ addTextToMap(x: number, y: number, text: string, textId: string, headingText: st
         'text': text
       }
     });
-  } else {
+  } 
+  else {
     // Add the source if it does not exist
-    this.map?.addSource(textId, {
+    this.map!.addSource(textId, {
       'type': 'geojson',
       'data': {
         'type': 'Feature',
@@ -267,11 +267,10 @@ addTextToMap(x: number, y: number, text: string, textId: string, headingText: st
       }
     });
   }
-
-  // Add or remove text layers based on zoom level
+  // Add text to specific cells on zooming
   this.map?.on('zoom', () => {
     const currentZoom = this.map!.getZoom();
-    if (currentZoom >= 17) {
+    if (currentZoom >= 16) {
       // Check if the text layer already exists before adding it
       if (!this.map?.getLayer(textId)) {
         this.map?.addLayer({
@@ -298,17 +297,13 @@ addTextToMap(x: number, y: number, text: string, textId: string, headingText: st
       if (this.map?.getLayer('heading-layer')) {
         this.map?.removeLayer('heading-layer');
       }
-      if (this.map?.getSource('heading-layer')) {
-        this.map?.removeSource('heading-layer');
-      }
     } else if (currentZoom >= 13 && currentZoom < 16) {
       // Add the heading layer at the centroid
       if (!this.map?.getLayer('heading-layer')) {
-          // Remove existing source if it exists
-          if (this.map?.getSource('heading-layer')) {
-            this.map?.removeSource('heading-layer');
-          }
-          this.map?.addSource('heading-layer', {
+        this.map?.addLayer({
+          id: 'heading-layer',
+          type: 'symbol',
+          source: {
             'type': 'geojson',
             'data': {
               'type': 'Feature',
@@ -320,11 +315,7 @@ addTextToMap(x: number, y: number, text: string, textId: string, headingText: st
                 'text': headingText
               }
             }
-          });
-        this.map?.addLayer({
-          id: 'heading-layer',
-          type: 'symbol',
-          source: 'heading-layer',
+          },
           layout: {
             'text-field': headingText,
             'text-size': 16,
@@ -352,21 +343,19 @@ addTextToMap(x: number, y: number, text: string, textId: string, headingText: st
       if (this.map?.getLayer('heading-layer')) {
         this.map?.removeLayer('heading-layer');
       }
-      if (this.map?.getSource('heading-layer')) {
-        this.map?.removeSource('heading-layer');
-      }
     }
   });
+
 }
 
-// Highlight cells with texts
+
+
 // Highlight cells with texts
 highlightCell(cellBounds: [number, number][], highlightId: string) {
   // Check if the source already exists
   if (this.map?.getSource(highlightId)) {
     this.map?.removeSource(highlightId);
   }
-
   // Add the source for the highlighted cell
   this.map?.addSource(highlightId, {
     'type': 'geojson',
@@ -376,46 +365,27 @@ highlightCell(cellBounds: [number, number][], highlightId: string) {
         'type': 'Polygon',
         'coordinates': [cellBounds]
       },
-      properties: {}
+      properties:{}
     }
   });
-
-  // Check if the fill layer already exists
-  if (this.map?.getLayer(`${highlightId}-fill`)) {
-    this.map?.removeLayer(`${highlightId}-fill`);
+  // Check if the layer already exists
+  if (this.map?.getLayer(highlightId)) {
+    this.map?.removeLayer(highlightId);
   }
-
-  // Add the fill layer for the highlighted cell
+  // Add the layer for the highlighted cell
   this.map?.addLayer({
-    'id': `${highlightId}-fill`,
+    'id': highlightId,
     'type': 'fill',
     'source': highlightId,
     'layout': {},
     'paint': {
-      'fill-color': '#cceeff', // Background color
-      'fill-opacity': 0.5 // Adjust opacity if needed
-    }
-  });
-
-  // Check if the line layer already exists
-  if (this.map?.getLayer(`${highlightId}-line`)) {
-    this.map?.removeLayer(`${highlightId}-line`);
-  }
-
-  // Add the line layer for the highlighted cell border
-  this.map?.addLayer({
-    'id': `${highlightId}-line`,
-    'type': 'line',
-    'source': highlightId,
-    'layout': {},
-    'paint': {
-      'line-color': '#66ccff', // Border color
-      'line-width': 3 // Border thickness
+      'fill-color': 'yellow', // Background color
+      'fill-opacity': 0.5, // Adjust opacity if needed
+      'fill-outline-color': 'black', // Border color
+      // 'fill-outline-width': 2 // Border thickness
     }
   });
 }
-
-
  // Function to draw a line on the map using coordinates
  drawLine(coords: any[], lineId: string) {
   this.map!.addSource(lineId, {
@@ -436,8 +406,8 @@ highlightCell(cellBounds: [number, number][], highlightId: string) {
     'source': lineId,
     'layout': {},
     'paint': {
-      'line-color': '#cceeff',
-      'line-width': 1
+      'line-color': '#53b6bd',
+      'line-width': 2
     }
   });
 }

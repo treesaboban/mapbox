@@ -31,6 +31,7 @@ export class MapCommonComponent implements OnInit {
       defaultMode: 'draw_polygon',
     });
   }
+
   ngOnInit(): void {
     mapboxgl.accessToken =
       'pk.eyJ1IjoidHJlYXNhYm9iYW4iLCJhIjoiY2x5em56dXA5Mmo0ZzJrcHU2ejd3azkzeiJ9._tFcEoRrGm2ou7FeyTsh-g';
@@ -121,8 +122,8 @@ plotPolygon(coordinates: number[][]) {
       source: 'polygon',
       layout: {},
       paint: {
-          'line-color': '#cceeff',
-          'line-width': 1,
+          'line-color': '#20a6e8',
+          'line-width': 2,
       },
   });
 
@@ -271,7 +272,7 @@ addTextToMap(x: number, y: number, text: string, textId: string, headingText: st
   // Add or remove text layers based on zoom level
   this.map?.on('zoom', () => {
     const currentZoom = this.map!.getZoom();
-    if (currentZoom >= 17) {
+    if (currentZoom >= 16) {
       // Check if the text layer already exists before adding it
       if (!this.map?.getLayer(textId)) {
         this.map?.addLayer({
@@ -298,17 +299,13 @@ addTextToMap(x: number, y: number, text: string, textId: string, headingText: st
       if (this.map?.getLayer('heading-layer')) {
         this.map?.removeLayer('heading-layer');
       }
-      if (this.map?.getSource('heading-layer')) {
-        this.map?.removeSource('heading-layer');
-      }
     } else if (currentZoom >= 13 && currentZoom < 16) {
       // Add the heading layer at the centroid
       if (!this.map?.getLayer('heading-layer')) {
-          // Remove existing source if it exists
-          if (this.map?.getSource('heading-layer')) {
-            this.map?.removeSource('heading-layer');
-          }
-          this.map?.addSource('heading-layer', {
+        this.map?.addLayer({
+          id: 'heading-layer',
+          type: 'symbol',
+          source: {
             'type': 'geojson',
             'data': {
               'type': 'Feature',
@@ -320,11 +317,7 @@ addTextToMap(x: number, y: number, text: string, textId: string, headingText: st
                 'text': headingText
               }
             }
-          });
-        this.map?.addLayer({
-          id: 'heading-layer',
-          type: 'symbol',
-          source: 'heading-layer',
+          },
           layout: {
             'text-field': headingText,
             'text-size': 16,
@@ -352,21 +345,12 @@ addTextToMap(x: number, y: number, text: string, textId: string, headingText: st
       if (this.map?.getLayer('heading-layer')) {
         this.map?.removeLayer('heading-layer');
       }
-      if (this.map?.getSource('heading-layer')) {
-        this.map?.removeSource('heading-layer');
-      }
     }
   });
 }
 
 // Highlight cells with texts
-// Highlight cells with texts
 highlightCell(cellBounds: [number, number][], highlightId: string) {
-  // Check if the source already exists
-  if (this.map?.getSource(highlightId)) {
-    this.map?.removeSource(highlightId);
-  }
-
   // Add the source for the highlighted cell
   this.map?.addSource(highlightId, {
     'type': 'geojson',
@@ -376,44 +360,27 @@ highlightCell(cellBounds: [number, number][], highlightId: string) {
         'type': 'Polygon',
         'coordinates': [cellBounds]
       },
-      properties: {}
+      properties:{}
     }
   });
 
-  // Check if the fill layer already exists
-  if (this.map?.getLayer(`${highlightId}-fill`)) {
-    this.map?.removeLayer(`${highlightId}-fill`);
-  }
-
-  // Add the fill layer for the highlighted cell
+  // Add the layer for the highlighted cell
   this.map?.addLayer({
-    'id': `${highlightId}-fill`,
+    'id': highlightId,
     'type': 'fill',
     'source': highlightId,
     'layout': {},
     'paint': {
-      'fill-color': '#cceeff', // Background color
-      'fill-opacity': 0.5 // Adjust opacity if needed
-    }
-  });
-
-  // Check if the line layer already exists
-  if (this.map?.getLayer(`${highlightId}-line`)) {
-    this.map?.removeLayer(`${highlightId}-line`);
-  }
-
-  // Add the line layer for the highlighted cell border
-  this.map?.addLayer({
-    'id': `${highlightId}-line`,
-    'type': 'line',
-    'source': highlightId,
-    'layout': {},
-    'paint': {
-      'line-color': '#66ccff', // Border color
-      'line-width': 3 // Border thickness
+      'fill-color': 'yellow', // Background color
+      'fill-opacity': 0.5, // Adjust opacity if needed
+      'fill-outline-color': 'black', // Border color
+      // 'fill-outline-width': 2 // Border thickness
     }
   });
 }
+
+
+
 
 
  // Function to draw a line on the map using coordinates
@@ -436,8 +403,8 @@ highlightCell(cellBounds: [number, number][], highlightId: string) {
     'source': lineId,
     'layout': {},
     'paint': {
-      'line-color': '#cceeff',
-      'line-width': 1
+      'line-color': '#53b6bd',
+      'line-width': 2
     }
   });
 }
