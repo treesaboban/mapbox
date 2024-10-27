@@ -94,12 +94,28 @@ export class MapCommonComponent implements OnInit {
       coordinates.push(fourthCord);
       this.plotPolygon(coordinates);
       this.plotGpsPoints(coordinates);
+      // this.plotRectangles(coordinates);
     } else {
       console.log('error in fetching data');
     }
   }
   
   calculateFourthCord(coords: number[][]) {
+    console.log(coords);
+    [
+      [
+          -97.195,
+          39.409
+      ],
+      [
+          -97.195,
+          39.415
+      ],
+      [
+          -97.194,
+          39.409
+      ]
+  ]
     const x1 = coords[0][0];    
     const y1 = coords[0][1];   
     const x2 = coords[1][0];     
@@ -115,31 +131,15 @@ export class MapCommonComponent implements OnInit {
 }
 
 
-// Given bounding box coordinates (min_lon, min_lat, max_lon, max_lat)
-bbox = [-123.1216, 49.2827, -123.1116, 49.2927];
-
-// Function to create square coordinates
-createSquare(bbox: number[]): number[][] {
-    const centerLon = (bbox[0] + bbox[2]) / 2;
-    const centerLat = (bbox[1] + bbox[3]) / 2;
-    const sideLength = Math.max(bbox[2] - bbox[0], bbox[3] - bbox[1]);
-
-    return [
-        [centerLon - sideLength / 2, centerLat - sideLength / 2],
-        [centerLon + sideLength / 2, centerLat - sideLength / 2],
-        [centerLon + sideLength / 2, centerLat + sideLength / 2],
-        [centerLon - sideLength / 2, centerLat + sideLength / 2],
-        [centerLon - sideLength / 2, centerLat - sideLength / 2],  // Close the square
-    ];
-}
-
 plotPolygon(coordinates: number[][]) {
   if (!this.mapLoaded) {
       console.log('map is not loaded');
       return;
   }
 
+  // Ensure the polygon is closed by adding the first coordinate at the end
   const closedCoordinates = [...coordinates, coordinates[0]]; 
+
   const geojson: Feature<Geometry> = {
       type: 'Feature',
       geometry: {
@@ -149,23 +149,12 @@ plotPolygon(coordinates: number[][]) {
       properties: {},
   };
 
-  const bbox = turf.bbox(geojson);
-  const squareCoordinates = this.createSquare(bbox);
-  const polygon = turf.polygon([squareCoordinates]);
-  const squareGeojson = {
-      type: 'Feature',
-      geometry: {
-          type: 'Polygon',
-          coordinates: [squareCoordinates],
-      },
-      properties: {}
-  };
-
   this.map!.addSource('polygon', {
       type: 'geojson',
-      data: squareGeojson as any,
+      data: geojson,
   });
 
+  // Add polygon fill layer
   this.map!.addLayer({
       id: 'polygon-layer',
       type: 'fill',
@@ -177,6 +166,7 @@ plotPolygon(coordinates: number[][]) {
       },
   });
 
+  // Add border line
   this.map!.addLayer({
       id: 'polygon-border',
       type: 'line',
@@ -188,10 +178,41 @@ plotPolygon(coordinates: number[][]) {
       },
   });
 
-  this.drawGridLines(squareCoordinates);
-  // this.markPointsInsidePolygon(squareCoordinates, polygon);
+  this.drawGridLines(closedCoordinates);
 }
 
+ 
+plotGpsPoints(coordinates: number[][]) {
+  const marker = new mapboxgl.Marker({ color: '#b40219' })
+    .setLngLat([coordinates[0][0], coordinates[0][1]])
+    .addTo(this.map!);
+
+  this.map?.flyTo({
+    center: [coordinates[0][0], coordinates[0][1]],
+    zoom: 15,
+  });
+
+  this.map?.on('zoom', () => {
+      const currentZoom = this.map!.getZoom();
+      if (currentZoom > 10) { // Adjust the zoom level as needed
+          marker.remove(); // Remove marker when zoomed in
+      } else {
+          marker.addTo(this.map!); // Add marker when zoomed out
+      }
+  });
+}
+
+// Function to calculate the centroid of a polygon
+calculateCentroid = (coords: [number, number][]) => {
+  let xSum = 0, ySum = 0, n = coords.length;
+  coords.forEach(([x, y]) => {
+    xSum += x;
+    ySum += y;
+  });
+  return [xSum / n, ySum / n];
+};
+
+// Draw grid lines and add text to cells
 drawGridLines(coordinates: number[][]) { 
   const polygonBounds = this.getPolygonBounds(coordinates);
   const numRows = this.nRows;
@@ -242,68 +263,6 @@ drawGridLines(coordinates: number[][]) {
   this.addTextToCells(cellCenters, cellBoundaries, coordinates as any); // Add text to cells
 }
 
-// Function to calculate the bounding box of the polygon (min/max X and Y coordinates)
-getPolygonBounds(coords: any[]) {
-  let minX = coords[0][0], maxX = coords[0][0];
-  let minY = coords[0][1], maxY = coords[0][1];
-
-  for (const coord of coords) {
-    if (coord[0] < minX) minX = coord[0];
-    if (coord[0] > maxX) maxX = coord[0];
-    if (coord[1] < minY) minY = coord[1];
-    if (coord[1] > maxY) maxY = coord[1];
-  }
-
-  return { minX, maxX, minY, maxY };
-}
-
- 
-plotGpsPoints(coordinates: number[][]) {
-  const marker = new mapboxgl.Marker({ color: '#b40219' })
-    .setLngLat([coordinates[0][0], coordinates[0][1]])
-    .addTo(this.map!);
-
-  this.map?.flyTo({
-    center: [coordinates[0][0], coordinates[0][1]],
-    zoom: 15,
-  });
-
-  this.map?.on('zoom', () => {
-      const currentZoom = this.map!.getZoom();
-      if (currentZoom > 10) { // Adjust the zoom level as needed
-          marker.remove(); // Remove marker when zoomed in
-      } else {
-          marker.addTo(this.map!); // Add marker when zoomed out
-      }
-  });
-}
-
- // Function to draw a line on the map using coordinates
- drawLine(coords: any[], lineId: string) {
-  this.map!.addSource(lineId, {
-    'type': 'geojson',
-    'data': {
-      'type': 'Feature',
-      'geometry': {
-        'type': 'LineString',
-        'coordinates': coords
-      },
-      properties:{}
-    }
-  });
-
-  this.map!.addLayer({
-    'id': lineId,
-    'type': 'line',
-    'source': lineId,
-    'layout': {},
-    'paint': {
-      'line-color': '#cceeff',
-      'line-width': 1
-    }
-  });
-}
-
 // Adding text to cells
 addTextToCells(cellCenters: [number, number][], cellBoundaries: [number, number][][], polygonCoordinates: [number, number][]) {
   const texts = this.plotdata[0].plotinfo; // Your text for each cell
@@ -318,21 +277,11 @@ addTextToCells(cellCenters: [number, number][], cellBoundaries: [number, number]
   texts.forEach((text, index) => {
     if (index < cellCenters.length) {
       const [x, y] = cellCenters[index]; // Destructuring the tuple
-      this.addTextToMap(x, y, text.PLTID, `text-${index}`, trialId, polygonCoordinates); // Add text to the map
+      this.addTextToMap(x, y, text.id, `text-${index}`, trialId, polygonCoordinates); // Add text to the map
       this.highlightCell(cellBoundaries[index], `highlight-${index}`); // Highlight the cell
     }
   });
 }
-
-// Function to calculate the centroid of a polygon
-calculateCentroid = (coords: [number, number][]) => {
-  let xSum = 0, ySum = 0, n = coords.length;
-  coords.forEach(([x, y]) => {
-    xSum += x;
-    ySum += y;
-  });
-  return [xSum / n, ySum / n];
-};
 
 // Adding text cells to map
 addTextToMap(x: number, y: number, text: string, textId: string, headingText: string, polygonCoordinates: [number, number][]) {
@@ -514,5 +463,46 @@ highlightCell(cellBounds: [number, number][], highlightId: string) {
       'line-width': 3 // Border thickness
     }
   });
+}
+
+
+ // Function to draw a line on the map using coordinates
+ drawLine(coords: any[], lineId: string) {
+  this.map!.addSource(lineId, {
+    'type': 'geojson',
+    'data': {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'LineString',
+        'coordinates': coords
+      },
+      properties:{}
+    }
+  });
+
+  this.map!.addLayer({
+    'id': lineId,
+    'type': 'line',
+    'source': lineId,
+    'layout': {},
+    'paint': {
+      'line-color': '#cceeff',
+      'line-width': 1
+    }
+  });
+}
+ // Function to calculate the bounding box of the polygon (min/max X and Y coordinates)
+ getPolygonBounds(coords: any[]) {
+  let minX = coords[0][0], maxX = coords[0][0];
+  let minY = coords[0][1], maxY = coords[0][1];
+
+  for (const coord of coords) {
+    if (coord[0] < minX) minX = coord[0];
+    if (coord[0] > maxX) maxX = coord[0];
+    if (coord[1] < minY) minY = coord[1];
+    if (coord[1] > maxY) maxY = coord[1];
+  }
+
+  return { minX, maxX, minY, maxY };
 }
 }

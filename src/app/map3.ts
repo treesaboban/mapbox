@@ -21,6 +21,8 @@ export class MapCommonComponent implements OnInit {
   minRows = 3;
   maxRows = 10;
   plotdata = PlotData;
+  nRows: any;
+  nRngs: any;
   constructor(private el: ElementRef) {
     this.draw = new MapboxDraw({
       displayControlsDefault: true,
@@ -45,9 +47,29 @@ export class MapCommonComponent implements OnInit {
       this.mapLoaded = true;
       this.fetchGpsEndpoints();
     });   
-    this.plotdata[0].plantedCorners.abc.forEach(i=>{  
-      this.data.push(i);
-    })
+    const coords: [number, number][] = [];
+      const seenCoords = new Set<string>();
+      this.plotdata[0].data.forEach((item: any) => {
+        for (const key in item) {
+          if (item.hasOwnProperty(key)) {
+            const entry = item[key];
+            if (entry.abc.length > 0 && (entry.nRows || entry.nRngs || entry.minRng || entry.minRow)) {
+              this.nRows = entry.nRows;
+              this.nRngs = entry.nRngs;
+              console.log(this.nRows,this.nRngs);
+
+              entry.abc.forEach((coord: { long: number; lat: number }) => {
+                const coordString = `${coord.long},${coord.lat}`;
+                if (!seenCoords.has(coordString)) {
+                  seenCoords.add(coordString);
+                  coords.push([coord.long, coord.lat]);
+                  this.data = coords;
+                }
+              });
+            }
+          }
+        }
+      });
   }
 
   fetchGpsEndpoints() {
@@ -222,7 +244,7 @@ addTextToCells(cellCenters: [number, number][], cellBoundaries: [number, number]
       trialId = element.TID;
     }
   }
-  texts.forEach((text, index) => {
+  texts.forEach((text: { id: string; }, index: number) => {
       if (index < cellCenters.length) {
         const [x, y] = cellCenters[index]; // Destructuring the tuple
         this.addTextToMap(x, y, text.id, `text-${index}`, trialId, polygonCoordinates); // Add text to the map

@@ -1,1426 +1,1506 @@
-// outline data
-    export const PlotData = [
-      {
-        code: '102C',
-        description: '3C26 Britton, SD 102C rows33-56 PP Stg5, PP Stg6',
-        rowWidth: 0.762,
-        rowLength: 6.096,
-        alleyLength: 0.762,
-        nRows: 24,
-        nRngs: 40,
-        location: 922468865,
-        abc: [
-          [-97.90888910252477, 45.69268730483254],
-          [-97.90887139161316, 45.69488115396386],
-          [-97.90865431672236, 45.69268637373751],
-        ],
-        population: 86487,
-        id: 710780356,
-        uuid: 'db9100be-a11c-4d79-aba6-80b32f03f2fa',
-        group: 19918,
-        minRow: 33,
-        minRng: 1,
-        spirit: false,
-        plantedCorners: {
-          type: 'precision_planted',
-          abc: [
-            
-                [-92.420, 33.775],  // Point 1
-        
-                     [-92.410, 33.775],  // Point 2
-               
-                     [-92.410, 33.765],  // Point 3
-           
-                     
-              
-        ]
+// graph data
+export const PlotData = [
+    {
+     data:[
+        {
+            "167N": {
+                "abc": [
+                    {
+                        "long": -96.4715980149358,
+                        "lat": 43.62474031159699
+                    },
+                    {
+                        "long": -96.47159720530288,
+                        "lat": 43.62210669225039
+                    },
+                    {
+                        "long": -96.47197566337432,
+                        "lat": 43.62474024970576
+                    }
+                ],
+                "nRngs": "24",
+                "nRows": "40",
+                "minRng": "1",
+                "minRow": "209"
+            }
+        }
+    ],
+      plotinfo:[
+        {
+            "PLTID": "1012",
+            "y": 5,
+            "x": 221,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB63C4332",
+            "barcode": "LC001712765"
         },
-        plotinfo:[
-          {
-              "x": 93,
-              "y": -69,
-              "id": "1048",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 94,
-              "y": -69,
-              "id": "1048",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 95,
-              "y": -69,
-              "id": "1048",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 96,
-              "y": -69,
-              "id": "1048",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 89,
-              "y": -69,
-              "id": "1047",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 90,
-              "y": -69,
-              "id": "1047",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 91,
-              "y": -69,
-              "id": "1047",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 92,
-              "y": -69,
-              "id": "1047",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 85,
-              "y": -69,
-              "id": "1046",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 86,
-              "y": -69,
-              "id": "1046",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 87,
-              "y": -69,
-              "id": "1046",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 88,
-              "y": -69,
-              "id": "1046",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 81,
-              "y": -69,
-              "id": "1045",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 82,
-              "y": -69,
-              "id": "1045",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 83,
-              "y": -69,
-              "id": "1045",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 84,
-              "y": -69,
-              "id": "1045",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 77,
-              "y": -69,
-              "id": "1044",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 78,
-              "y": -69,
-              "id": "1044",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 79,
-              "y": -69,
-              "id": "1044",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 80,
-              "y": -69,
-              "id": "1044",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 73,
-              "y": -69,
-              "id": "1043",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 74,
-              "y": -69,
-              "id": "1043",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 75,
-              "y": -69,
-              "id": "1043",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 76,
-              "y": -69,
-              "id": "1043",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 69,
-              "y": -69,
-              "id": "1042",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 70,
-              "y": -69,
-              "id": "1042",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 71,
-              "y": -69,
-              "id": "1042",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 72,
-              "y": -69,
-              "id": "1042",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 65,
-              "y": -69,
-              "id": "1041",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 66,
-              "y": -69,
-              "id": "1041",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 67,
-              "y": -69,
-              "id": "1041",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 68,
-              "y": -69,
-              "id": "1041",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 65,
-              "y": -68,
-              "id": "1040",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 66,
-              "y": -68,
-              "id": "1040",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 67,
-              "y": -68,
-              "id": "1040",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 68,
-              "y": -68,
-              "id": "1040",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 69,
-              "y": -68,
-              "id": "1039",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 70,
-              "y": -68,
-              "id": "1039",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 71,
-              "y": -68,
-              "id": "1039",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 72,
-              "y": -68,
-              "id": "1039",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 73,
-              "y": -68,
-              "id": "1038",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 74,
-              "y": -68,
-              "id": "1038",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 75,
-              "y": -68,
-              "id": "1038",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 76,
-              "y": -68,
-              "id": "1038",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 77,
-              "y": -68,
-              "id": "1037",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 78,
-              "y": -68,
-              "id": "1037",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 79,
-              "y": -68,
-              "id": "1037",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 80,
-              "y": -68,
-              "id": "1037",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 81,
-              "y": -68,
-              "id": "1036",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 82,
-              "y": -68,
-              "id": "1036",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 83,
-              "y": -68,
-              "id": "1036",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 84,
-              "y": -68,
-              "id": "1036",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 85,
-              "y": -68,
-              "id": "1035",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 86,
-              "y": -68,
-              "id": "1035",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 87,
-              "y": -68,
-              "id": "1035",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 88,
-              "y": -68,
-              "id": "1035",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 89,
-              "y": -68,
-              "id": "1034",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 90,
-              "y": -68,
-              "id": "1034",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 91,
-              "y": -68,
-              "id": "1034",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 92,
-              "y": -68,
-              "id": "1034",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 93,
-              "y": -68,
-              "id": "1033",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 94,
-              "y": -68,
-              "id": "1033",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 95,
-              "y": -68,
-              "id": "1033",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 96,
-              "y": -68,
-              "id": "1033",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 93,
-              "y": -67,
-              "id": "1032",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 94,
-              "y": -67,
-              "id": "1032",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 95,
-              "y": -67,
-              "id": "1032",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 96,
-              "y": -67,
-              "id": "1032",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 89,
-              "y": -67,
-              "id": "1031",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 90,
-              "y": -67,
-              "id": "1031",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 91,
-              "y": -67,
-              "id": "1031",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 92,
-              "y": -67,
-              "id": "1031",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 85,
-              "y": -67,
-              "id": "1030",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 86,
-              "y": -67,
-              "id": "1030",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 87,
-              "y": -67,
-              "id": "1030",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 88,
-              "y": -67,
-              "id": "1030",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 81,
-              "y": -67,
-              "id": "1029",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 82,
-              "y": -67,
-              "id": "1029",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 83,
-              "y": -67,
-              "id": "1029",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 84,
-              "y": -67,
-              "id": "1029",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 77,
-              "y": -67,
-              "id": "1028",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 78,
-              "y": -67,
-              "id": "1028",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 79,
-              "y": -67,
-              "id": "1028",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 80,
-              "y": -67,
-              "id": "1028",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 73,
-              "y": -67,
-              "id": "1027",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 74,
-              "y": -67,
-              "id": "1027",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 75,
-              "y": -67,
-              "id": "1027",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 76,
-              "y": -67,
-              "id": "1027",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 69,
-              "y": -67,
-              "id": "1026",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 70,
-              "y": -67,
-              "id": "1026",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 71,
-              "y": -67,
-              "id": "1026",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 72,
-              "y": -67,
-              "id": "1026",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 65,
-              "y": -67,
-              "id": "1025",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 66,
-              "y": -67,
-              "id": "1025",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 67,
-              "y": -67,
-              "id": "1025",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 68,
-              "y": -67,
-              "id": "1025",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 65,
-              "y": -66,
-              "id": "1024",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 66,
-              "y": -66,
-              "id": "1024",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 67,
-              "y": -66,
-              "id": "1024",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 68,
-              "y": -66,
-              "id": "1024",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 69,
-              "y": -66,
-              "id": "1023",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 70,
-              "y": -66,
-              "id": "1023",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 71,
-              "y": -66,
-              "id": "1023",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 72,
-              "y": -66,
-              "id": "1023",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 73,
-              "y": -66,
-              "id": "1022",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 74,
-              "y": -66,
-              "id": "1022",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 75,
-              "y": -66,
-              "id": "1022",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 76,
-              "y": -66,
-              "id": "1022",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 77,
-              "y": -66,
-              "id": "1021",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 78,
-              "y": -66,
-              "id": "1021",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 79,
-              "y": -66,
-              "id": "1021",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 80,
-              "y": -66,
-              "id": "1021",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 81,
-              "y": -66,
-              "id": "1020",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 82,
-              "y": -66,
-              "id": "1020",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 83,
-              "y": -66,
-              "id": "1020",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 84,
-              "y": -66,
-              "id": "1020",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 85,
-              "y": -66,
-              "id": "1019",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 86,
-              "y": -66,
-              "id": "1019",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 87,
-              "y": -66,
-              "id": "1019",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 88,
-              "y": -66,
-              "id": "1019",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 89,
-              "y": -66,
-              "id": "1018",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 90,
-              "y": -66,
-              "id": "1018",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 91,
-              "y": -66,
-              "id": "1018",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 92,
-              "y": -66,
-              "id": "1018",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 93,
-              "y": -66,
-              "id": "1017",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 94,
-              "y": -66,
-              "id": "1017",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 95,
-              "y": -66,
-              "id": "1017",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 96,
-              "y": -66,
-              "id": "1017",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 93,
-              "y": -65,
-              "id": "1016",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 94,
-              "y": -65,
-              "id": "1016",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 95,
-              "y": -65,
-              "id": "1016",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 96,
-              "y": -65,
-              "id": "1016",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 89,
-              "y": -65,
-              "id": "1015",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 90,
-              "y": -65,
-              "id": "1015",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 91,
-              "y": -65,
-              "id": "1015",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 92,
-              "y": -65,
-              "id": "1015",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 85,
-              "y": -65,
-              "id": "1014",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 86,
-              "y": -65,
-              "id": "1014",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 87,
-              "y": -65,
-              "id": "1014",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 88,
-              "y": -65,
-              "id": "1014",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 81,
-              "y": -65,
-              "id": "1013",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 82,
-              "y": -65,
-              "id": "1013",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 83,
-              "y": -65,
-              "id": "1013",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 84,
-              "y": -65,
-              "id": "1013",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 77,
-              "y": -65,
-              "id": "1012",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 78,
-              "y": -65,
-              "id": "1012",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 79,
-              "y": -65,
-              "id": "1012",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 80,
-              "y": -65,
-              "id": "1012",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 73,
-              "y": -65,
-              "id": "1011",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 74,
-              "y": -65,
-              "id": "1011",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 75,
-              "y": -65,
-              "id": "1011",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 76,
-              "y": -65,
-              "id": "1011",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 69,
-              "y": -65,
-              "id": "1010",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 70,
-              "y": -65,
-              "id": "1010",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 71,
-              "y": -65,
-              "id": "1010",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 72,
-              "y": -65,
-              "id": "1010",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 65,
-              "y": -65,
-              "id": "1009",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 66,
-              "y": -65,
-              "id": "1009",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 67,
-              "y": -65,
-              "id": "1009",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 68,
-              "y": -65,
-              "id": "1009",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 65,
-              "y": -64,
-              "id": "1008",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 66,
-              "y": -64,
-              "id": "1008",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 67,
-              "y": -64,
-              "id": "1008",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 68,
-              "y": -64,
-              "id": "1008",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 69,
-              "y": -64,
-              "id": "1007",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 70,
-              "y": -64,
-              "id": "1007",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 71,
-              "y": -64,
-              "id": "1007",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 72,
-              "y": -64,
-              "id": "1007",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 73,
-              "y": -64,
-              "id": "1006",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 74,
-              "y": -64,
-              "id": "1006",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 75,
-              "y": -64,
-              "id": "1006",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 76,
-              "y": -64,
-              "id": "1006",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 77,
-              "y": -64,
-              "id": "1005",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 78,
-              "y": -64,
-              "id": "1005",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 79,
-              "y": -64,
-              "id": "1005",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 80,
-              "y": -64,
-              "id": "1005",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 81,
-              "y": -64,
-              "id": "1004",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 82,
-              "y": -64,
-              "id": "1004",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 83,
-              "y": -64,
-              "id": "1004",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 84,
-              "y": -64,
-              "id": "1004",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 85,
-              "y": -64,
-              "id": "1003",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 86,
-              "y": -64,
-              "id": "1003",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 87,
-              "y": -64,
-              "id": "1003",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 88,
-              "y": -64,
-              "id": "1003",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 89,
-              "y": -64,
-              "id": "1002",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 90,
-              "y": -64,
-              "id": "1002",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 91,
-              "y": -64,
-              "id": "1002",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 92,
-              "y": -64,
-              "id": "1002",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 93,
-              "y": -64,
-              "id": "1001",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 94,
-              "y": -64,
-              "id": "1001",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 95,
-              "y": -64,
-              "id": "1001",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          },
-          {
-              "x": 96,
-              "y": -64,
-              "id": "1001",
-              "CLR": "#00dcff",
-              "TID": "24SUBPYGME45A5424"
-          }
-      ],
-        crop: 'CORN',
-        loccd: '3C26',
-      },
-    ];
-      
+        {
+            "PLTID": "1011",
+            "y": 5,
+            "x": 225,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB63C4332",
+            "barcode": "LC001712766"
+        },
+        {
+            "PLTID": "1010",
+            "y": 5,
+            "x": 229,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB63C4332",
+            "barcode": "LC001712767"
+        },
+        {
+            "PLTID": "1009",
+            "y": 5,
+            "x": 233,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB63C4332",
+            "barcode": "LC001712768"
+        },
+        {
+            "PLTID": "1008",
+            "y": 5,
+            "x": 237,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB63C4332",
+            "barcode": "LC001712769"
+        },
+        {
+            "PLTID": "1007",
+            "y": 4,
+            "x": 237,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB63C4332",
+            "barcode": "LC001712770"
+        },
+        {
+            "PLTID": "1006",
+            "y": 4,
+            "x": 233,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB63C4332",
+            "barcode": "LC001712771"
+        },
+        {
+            "PLTID": "1005",
+            "y": 4,
+            "x": 229,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB63C4332",
+            "barcode": "LC001712772"
+        },
+        {
+            "PLTID": "1004",
+            "y": 4,
+            "x": 225,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB63C4332",
+            "barcode": "LC001712773"
+        },
+        {
+            "PLTID": "1003",
+            "y": 4,
+            "x": 221,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB63C4332",
+            "barcode": "LC001712774"
+        },
+        {
+            "PLTID": "1002",
+            "y": 4,
+            "x": 217,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB63C4332",
+            "barcode": "LC001712775"
+        },
+        {
+            "PLTID": "1001",
+            "y": 4,
+            "x": 213,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB63C4332",
+            "barcode": "LC001712776"
+        },
+        {
+            "PLTID": "2017",
+            "y": 7,
+            "x": 217,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB6314332",
+            "barcode": "LC001703513"
+        },
+        {
+            "PLTID": "2016",
+            "y": 7,
+            "x": 221,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB6314332",
+            "barcode": "LC001703514"
+        },
+        {
+            "PLTID": "2015",
+            "y": 7,
+            "x": 225,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB6314332",
+            "barcode": "LC001703515"
+        },
+        {
+            "PLTID": "2014",
+            "y": 7,
+            "x": 229,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB6314332",
+            "barcode": "LC001703516"
+        },
+        {
+            "PLTID": "2013",
+            "y": 7,
+            "x": 233,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB6314332",
+            "barcode": "LC001703517"
+        },
+        {
+            "PLTID": "2012",
+            "y": 7,
+            "x": 237,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB6314332",
+            "barcode": "LC001703518"
+        },
+        {
+            "PLTID": "2011",
+            "y": 6,
+            "x": 237,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB6314332",
+            "barcode": "LC001703519"
+        },
+        {
+            "PLTID": "2010",
+            "y": 6,
+            "x": 233,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB6314332",
+            "barcode": "LC001703520"
+        },
+        {
+            "PLTID": "2009",
+            "y": 6,
+            "x": 229,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB6314332",
+            "barcode": "LC001703521"
+        },
+        {
+            "PLTID": "2008",
+            "y": 6,
+            "x": 225,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB6314332",
+            "barcode": "LC001703522"
+        },
+        {
+            "PLTID": "2007",
+            "y": 6,
+            "x": 221,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB6314332",
+            "barcode": "LC001703523"
+        },
+        {
+            "PLTID": "2006",
+            "y": 6,
+            "x": 217,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB6314332",
+            "barcode": "LC001703524"
+        },
+        {
+            "PLTID": "2005",
+            "y": 6,
+            "x": 213,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB6314332",
+            "barcode": "LC001703525"
+        },
+        {
+            "PLTID": "2004",
+            "y": 6,
+            "x": 209,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB6314332",
+            "barcode": "LC001703526"
+        },
+        {
+            "PLTID": "2003",
+            "y": 5,
+            "x": 209,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB6314332",
+            "barcode": "LC001703527"
+        },
+        {
+            "PLTID": "2002",
+            "y": 5,
+            "x": 213,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB6314332",
+            "barcode": "LC001703528"
+        },
+        {
+            "PLTID": "2001",
+            "y": 5,
+            "x": 217,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB6314332",
+            "barcode": "LC001703529"
+        },
+        {
+            "PLTID": "1017",
+            "y": 4,
+            "x": 209,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB6314332",
+            "barcode": "LC001703530"
+        },
+        {
+            "PLTID": "1016",
+            "y": 3,
+            "x": 209,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB6314332",
+            "barcode": "LC001703531"
+        },
+        {
+            "PLTID": "1015",
+            "y": 3,
+            "x": 213,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB6314332",
+            "barcode": "LC001703532"
+        },
+        {
+            "PLTID": "1014",
+            "y": 3,
+            "x": 217,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB6314332",
+            "barcode": "LC001703533"
+        },
+        {
+            "PLTID": "1013",
+            "y": 3,
+            "x": 221,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB6314332",
+            "barcode": "LC001703534"
+        },
+        {
+            "PLTID": "1012",
+            "y": 3,
+            "x": 225,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB6314332",
+            "barcode": "LC001703535"
+        },
+        {
+            "PLTID": "1011",
+            "y": 3,
+            "x": 229,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB6314332",
+            "barcode": "LC001703536"
+        },
+        {
+            "PLTID": "1010",
+            "y": 3,
+            "x": 233,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB6314332",
+            "barcode": "LC001703537"
+        },
+        {
+            "PLTID": "1009",
+            "y": 3,
+            "x": 237,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB6314332",
+            "barcode": "LC001703538"
+        },
+        {
+            "PLTID": "1008",
+            "y": 2,
+            "x": 237,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB6314332",
+            "barcode": "LC001703539"
+        },
+        {
+            "PLTID": "1007",
+            "y": 2,
+            "x": 233,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB6314332",
+            "barcode": "LC001703540"
+        },
+        {
+            "PLTID": "1006",
+            "y": 2,
+            "x": 229,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB6314332",
+            "barcode": "LC001703541"
+        },
+        {
+            "PLTID": "1005",
+            "y": 2,
+            "x": 225,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB6314332",
+            "barcode": "LC001703542"
+        },
+        {
+            "PLTID": "1004",
+            "y": 2,
+            "x": 221,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB6314332",
+            "barcode": "LC001703543"
+        },
+        {
+            "PLTID": "1003",
+            "y": 2,
+            "x": 217,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB6314332",
+            "barcode": "LC001703544"
+        },
+        {
+            "PLTID": "1002",
+            "y": 2,
+            "x": 213,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB6314332",
+            "barcode": "LC001703545"
+        },
+        {
+            "PLTID": "1001",
+            "y": 2,
+            "x": 209,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB6314332",
+            "barcode": "LC001703546"
+        }
+    ]
 
+}
+]
 
-      // abc: [
-      //   [-96.818668,44.334819],  // Point 1
-      //   [-96.818681,44.333925],  // Point 2 (moved east)
-      //   [-96.813711,44.334792],  // Point 3 (moved east)
-      // ],
-
-
-      // "abc": [
-      //   [-92.420, 37.775],  // Point 1
-
-      //        [-92.410, 37.775],  // Point 2
-       
-      //        [-92.410, 37.765],  // Point 3
-   
-      //        
-      // ]
-
-
-      // if (currentZoom == 15) {
-      //   // Add the text layer for the heading
-      //   this.map!.addLayer({
-      //     id: textId + '-text',
-      //     type: 'symbol',
-      //     source: textId,
-      //     layout: {
-      //       'text-field': headingText,
-      //       'text-size': 16,
-      //       'text-font': ['Open Sans Bold'],
-      //       'text-anchor': 'center',
-      //       'text-offset': [0, 0],
-      //     },
-      //     paint: {
-      //       'text-color': 'black',
-      //     },
-      //   });
-      // }
+    // export const PlotData = [
+    //     {
+    //      data:[
+    //         {
+    //             "102N": {
+    //                 "abc": [
+    //                     {
+    //                         "long": -89.3209758440906,
+    //                         "lat": 38.27274852030761
+    //                     },
+    //                     {
+    //                         "long": -89.32100957912384,
+    //                         "lat": 38.27088194636341
+    //                     },
+    //                     {
+    //                         "long": -89.32125494848425,
+    //                         "lat": 38.27275329061187
+    //                     }
+    //                 ],
+    //                 "nRngs": "34",
+    //                 "nRows": "32",
+    //                 "minRng": "1",
+    //                 "minRow": "65"
+    //             },
+    //             "104N": {
+    //                 "abc": [
+    //                     {
+    //                         "long": -97.19523544510515,
+    //                         "lat": 39.4095917724111
+    //                     },
+    //                     {
+    //                         "long": -97.1952331270864,
+    //                         "lat": 39.415082685382295
+    //                     },
+    //                     {
+    //                         "long": -97.1949523568454,
+    //                         "lat": 39.40959169396243
+    //                     }
+    //                 ],
+    //                 "nRngs": "",
+    //                 "nRows": "",
+    //                 "minRng": "",
+    //                 "minRow": ""
+    //             }
+    //         }
+    //     ],
+    //       plotinfo:[
+    //         {
+    //             "PLTID": "1064",
+    //             "y": 5,
+    //             "x": 5,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000879965"
+    //         },
+    //         {
+    //             "PLTID": "1063",
+    //             "y": 5,
+    //             "x": 7,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000879966"
+    //         },
+    //         {
+    //             "PLTID": "1062",
+    //             "y": 5,
+    //             "x": 9,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000879967"
+    //         },
+    //         {
+    //             "PLTID": "1061",
+    //             "y": 5,
+    //             "x": 11,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000879968"
+    //         },
+    //         {
+    //             "PLTID": "1060",
+    //             "y": 5,
+    //             "x": 13,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000879969"
+    //         },
+    //         {
+    //             "PLTID": "1059",
+    //             "y": 5,
+    //             "x": 15,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000879970"
+    //         },
+    //         {
+    //             "PLTID": "1058",
+    //             "y": 5,
+    //             "x": 17,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000879971"
+    //         },
+    //         {
+    //             "PLTID": "1057",
+    //             "y": 5,
+    //             "x": 19,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000879972"
+    //         },
+    //         {
+    //             "PLTID": "1056",
+    //             "y": 5,
+    //             "x": 21,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000879973"
+    //         },
+    //         {
+    //             "PLTID": "1055",
+    //             "y": 5,
+    //             "x": 23,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000879974"
+    //         },
+    //         {
+    //             "PLTID": "1054",
+    //             "y": 5,
+    //             "x": 25,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000879975"
+    //         },
+    //         {
+    //             "PLTID": "1053",
+    //             "y": 5,
+    //             "x": 27,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000879976"
+    //         },
+    //         {
+    //             "PLTID": "1052",
+    //             "y": 5,
+    //             "x": 29,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000879977"
+    //         },
+    //         {
+    //             "PLTID": "1051",
+    //             "y": 5,
+    //             "x": 31,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000879978"
+    //         },
+    //         {
+    //             "PLTID": "1050",
+    //             "y": 5,
+    //             "x": 33,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000879979"
+    //         },
+    //         {
+    //             "PLTID": "1049",
+    //             "y": 5,
+    //             "x": 35,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000879980"
+    //         },
+    //         {
+    //             "PLTID": "1048",
+    //             "y": 4,
+    //             "x": 35,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000879981"
+    //         },
+    //         {
+    //             "PLTID": "1047",
+    //             "y": 4,
+    //             "x": 33,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000879982"
+    //         },
+    //         {
+    //             "PLTID": "1046",
+    //             "y": 4,
+    //             "x": 31,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000879983"
+    //         },
+    //         {
+    //             "PLTID": "1045",
+    //             "y": 4,
+    //             "x": 29,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000879984"
+    //         },
+    //         {
+    //             "PLTID": "1044",
+    //             "y": 4,
+    //             "x": 27,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000879985"
+    //         },
+    //         {
+    //             "PLTID": "1043",
+    //             "y": 4,
+    //             "x": 25,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000879986"
+    //         },
+    //         {
+    //             "PLTID": "1042",
+    //             "y": 4,
+    //             "x": 23,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000879987"
+    //         },
+    //         {
+    //             "PLTID": "1041",
+    //             "y": 4,
+    //             "x": 21,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000879988"
+    //         },
+    //         {
+    //             "PLTID": "1040",
+    //             "y": 4,
+    //             "x": 19,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000879989"
+    //         },
+    //         {
+    //             "PLTID": "1039",
+    //             "y": 4,
+    //             "x": 17,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000879990"
+    //         },
+    //         {
+    //             "PLTID": "1038",
+    //             "y": 4,
+    //             "x": 15,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000879991"
+    //         },
+    //         {
+    //             "PLTID": "1037",
+    //             "y": 4,
+    //             "x": 13,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000879992"
+    //         },
+    //         {
+    //             "PLTID": "1036",
+    //             "y": 4,
+    //             "x": 11,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000879993"
+    //         },
+    //         {
+    //             "PLTID": "1035",
+    //             "y": 4,
+    //             "x": 9,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000879994"
+    //         },
+    //         {
+    //             "PLTID": "1034",
+    //             "y": 4,
+    //             "x": 7,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000879995"
+    //         },
+    //         {
+    //             "PLTID": "1033",
+    //             "y": 4,
+    //             "x": 5,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000879996"
+    //         },
+    //         {
+    //             "PLTID": "1032",
+    //             "y": 3,
+    //             "x": 5,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000879997"
+    //         },
+    //         {
+    //             "PLTID": "1031",
+    //             "y": 3,
+    //             "x": 7,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000879998"
+    //         },
+    //         {
+    //             "PLTID": "1030",
+    //             "y": 3,
+    //             "x": 9,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000879999"
+    //         },
+    //         {
+    //             "PLTID": "1029",
+    //             "y": 3,
+    //             "x": 11,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000880000"
+    //         },
+    //         {
+    //             "PLTID": "1028",
+    //             "y": 3,
+    //             "x": 13,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000880001"
+    //         },
+    //         {
+    //             "PLTID": "1027",
+    //             "y": 3,
+    //             "x": 15,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000880002"
+    //         },
+    //         {
+    //             "PLTID": "1026",
+    //             "y": 3,
+    //             "x": 17,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000880003"
+    //         },
+    //         {
+    //             "PLTID": "1025",
+    //             "y": 3,
+    //             "x": 19,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000880004"
+    //         },
+    //         {
+    //             "PLTID": "1024",
+    //             "y": 3,
+    //             "x": 21,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000880005"
+    //         },
+    //         {
+    //             "PLTID": "1023",
+    //             "y": 3,
+    //             "x": 23,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000880006"
+    //         },
+    //         {
+    //             "PLTID": "1022",
+    //             "y": 3,
+    //             "x": 25,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000880007"
+    //         },
+    //         {
+    //             "PLTID": "1021",
+    //             "y": 3,
+    //             "x": 27,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000880008"
+    //         },
+    //         {
+    //             "PLTID": "1020",
+    //             "y": 3,
+    //             "x": 29,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000880009"
+    //         },
+    //         {
+    //             "PLTID": "1019",
+    //             "y": 3,
+    //             "x": 31,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000880010"
+    //         },
+    //         {
+    //             "PLTID": "1018",
+    //             "y": 3,
+    //             "x": 33,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000880011"
+    //         },
+    //         {
+    //             "PLTID": "1017",
+    //             "y": 3,
+    //             "x": 35,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000880012"
+    //         },
+    //         {
+    //             "PLTID": "1016",
+    //             "y": 2,
+    //             "x": 35,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000880013"
+    //         },
+    //         {
+    //             "PLTID": "1015",
+    //             "y": 2,
+    //             "x": 33,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000880014"
+    //         },
+    //         {
+    //             "PLTID": "1014",
+    //             "y": 2,
+    //             "x": 31,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000880015"
+    //         },
+    //         {
+    //             "PLTID": "1013",
+    //             "y": 2,
+    //             "x": 29,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000880016"
+    //         },
+    //         {
+    //             "PLTID": "1012",
+    //             "y": 2,
+    //             "x": 27,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000880017"
+    //         },
+    //         {
+    //             "PLTID": "1011",
+    //             "y": 2,
+    //             "x": 25,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000880018"
+    //         },
+    //         {
+    //             "PLTID": "1010",
+    //             "y": 2,
+    //             "x": 23,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000880019"
+    //         },
+    //         {
+    //             "PLTID": "1009",
+    //             "y": 2,
+    //             "x": 21,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000880020"
+    //         },
+    //         {
+    //             "PLTID": "1008",
+    //             "y": 2,
+    //             "x": 19,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000880021"
+    //         },
+    //         {
+    //             "PLTID": "1007",
+    //             "y": 2,
+    //             "x": 17,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000880022"
+    //         },
+    //         {
+    //             "PLTID": "1006",
+    //             "y": 2,
+    //             "x": 15,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000880023"
+    //         },
+    //         {
+    //             "PLTID": "1005",
+    //             "y": 2,
+    //             "x": 13,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000880024"
+    //         },
+    //         {
+    //             "PLTID": "1004",
+    //             "y": 2,
+    //             "x": 11,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000880025"
+    //         },
+    //         {
+    //             "PLTID": "1003",
+    //             "y": 2,
+    //             "x": 9,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000880026"
+    //         },
+    //         {
+    //             "PLTID": "1002",
+    //             "y": 2,
+    //             "x": 7,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000880027"
+    //         },
+    //         {
+    //             "PLTID": "1001",
+    //             "y": 2,
+    //             "x": 5,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGDB3010318",
+    //             "barcode": "LC000880028"
+    //         },
+    //         {
+    //             "PLTID": "1048",
+    //             "y": 10,
+    //             "x": 101,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGAB4010318",
+    //             "barcode": "LC001853365"
+    //         },
+    //         {
+    //             "PLTID": "1047",
+    //             "y": 10,
+    //             "x": 105,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGAB4010318",
+    //             "barcode": "LC001853366"
+    //         },
+    //         {
+    //             "PLTID": "1046",
+    //             "y": 10,
+    //             "x": 109,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGAB4010318",
+    //             "barcode": "LC001853367"
+    //         },
+    //         {
+    //             "PLTID": "1045",
+    //             "y": 10,
+    //             "x": 113,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGAB4010318",
+    //             "barcode": "LC001853368"
+    //         },
+    //         {
+    //             "PLTID": "1043",
+    //             "y": 10,
+    //             "x": 121,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGAB4010318",
+    //             "barcode": "LC001853370"
+    //         },
+    //         {
+    //             "PLTID": "1042",
+    //             "y": 9,
+    //             "x": 121,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGAB4010318",
+    //             "barcode": "LC001853371"
+    //         },
+    //         {
+    //             "PLTID": "1041",
+    //             "y": 9,
+    //             "x": 117,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGAB4010318",
+    //             "barcode": "LC001853372"
+    //         },
+    //         {
+    //             "PLTID": "1040",
+    //             "y": 9,
+    //             "x": 113,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGAB4010318",
+    //             "barcode": "LC001853373"
+    //         },
+    //         {
+    //             "PLTID": "1039",
+    //             "y": 9,
+    //             "x": 109,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGAB4010318",
+    //             "barcode": "LC001853374"
+    //         },
+    //         {
+    //             "PLTID": "1038",
+    //             "y": 9,
+    //             "x": 105,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGAB4010318",
+    //             "barcode": "LC001853375"
+    //         },
+    //         {
+    //             "PLTID": "1037",
+    //             "y": 9,
+    //             "x": 101,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGAB4010318",
+    //             "barcode": "LC001853376"
+    //         },
+    //         {
+    //             "PLTID": "1036",
+    //             "y": 8,
+    //             "x": 101,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGAB4010318",
+    //             "barcode": "LC001853377"
+    //         },
+    //         {
+    //             "PLTID": "1035",
+    //             "y": 8,
+    //             "x": 105,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGAB4010318",
+    //             "barcode": "LC001853378"
+    //         },
+    //         {
+    //             "PLTID": "1034",
+    //             "y": 8,
+    //             "x": 109,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGAB4010318",
+    //             "barcode": "LC001853379"
+    //         },
+    //         {
+    //             "PLTID": "1031",
+    //             "y": 8,
+    //             "x": 121,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGAB4010318",
+    //             "barcode": "LC001853382"
+    //         },
+    //         {
+    //             "PLTID": "1030",
+    //             "y": 7,
+    //             "x": 121,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGAB4010318",
+    //             "barcode": "LC001853383"
+    //         },
+    //         {
+    //             "PLTID": "1029",
+    //             "y": 7,
+    //             "x": 117,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGAB4010318",
+    //             "barcode": "LC001853384"
+    //         },
+    //         {
+    //             "PLTID": "1027",
+    //             "y": 7,
+    //             "x": 109,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGAB4010318",
+    //             "barcode": "LC001853386"
+    //         },
+    //         {
+    //             "PLTID": "1026",
+    //             "y": 7,
+    //             "x": 105,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGAB4010318",
+    //             "barcode": "LC001853387"
+    //         },
+    //         {
+    //             "PLTID": "1024",
+    //             "y": 6,
+    //             "x": 101,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGAB4010318",
+    //             "barcode": "LC001853389"
+    //         },
+    //         {
+    //             "PLTID": "1023",
+    //             "y": 6,
+    //             "x": 105,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGAB4010318",
+    //             "barcode": "LC001853390"
+    //         },
+    //         {
+    //             "PLTID": "1022",
+    //             "y": 6,
+    //             "x": 109,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGAB4010318",
+    //             "barcode": "LC001853391"
+    //         },
+    //         {
+    //             "PLTID": "1021",
+    //             "y": 6,
+    //             "x": 113,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGAB4010318",
+    //             "barcode": "LC001853392"
+    //         },
+    //         {
+    //             "PLTID": "1020",
+    //             "y": 6,
+    //             "x": 117,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGAB4010318",
+    //             "barcode": "LC001853393"
+    //         },
+    //         {
+    //             "PLTID": "1019",
+    //             "y": 6,
+    //             "x": 121,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGAB4010318",
+    //             "barcode": "LC001853394"
+    //         },
+    //         {
+    //             "PLTID": "1018",
+    //             "y": 5,
+    //             "x": 121,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGAB4010318",
+    //             "barcode": "LC001853395"
+    //         },
+    //         {
+    //             "PLTID": "1017",
+    //             "y": 5,
+    //             "x": 117,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGAB4010318",
+    //             "barcode": "LC001853396"
+    //         },
+    //         {
+    //             "PLTID": "1016",
+    //             "y": 5,
+    //             "x": 113,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGAB4010318",
+    //             "barcode": "LC001853397"
+    //         },
+    //         {
+    //             "PLTID": "1015",
+    //             "y": 5,
+    //             "x": 109,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGAB4010318",
+    //             "barcode": "LC001853398"
+    //         },
+    //         {
+    //             "PLTID": "1014",
+    //             "y": 5,
+    //             "x": 105,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGAB4010318",
+    //             "barcode": "LC001853399"
+    //         },
+    //         {
+    //             "PLTID": "1013",
+    //             "y": 5,
+    //             "x": 101,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGAB4010318",
+    //             "barcode": "LC001853400"
+    //         },
+    //         {
+    //             "PLTID": "1012",
+    //             "y": 4,
+    //             "x": 101,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGAB4010318",
+    //             "barcode": "LC001853401"
+    //         },
+    //         {
+    //             "PLTID": "1011",
+    //             "y": 4,
+    //             "x": 105,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGAB4010318",
+    //             "barcode": "LC001853402"
+    //         },
+    //         {
+    //             "PLTID": "1010",
+    //             "y": 4,
+    //             "x": 109,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGAB4010318",
+    //             "barcode": "LC001853403"
+    //         },
+    //         {
+    //             "PLTID": "1009",
+    //             "y": 4,
+    //             "x": 113,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGAB4010318",
+    //             "barcode": "LC001853404"
+    //         },
+    //         {
+    //             "PLTID": "1008",
+    //             "y": 4,
+    //             "x": 117,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGAB4010318",
+    //             "barcode": "LC001853405"
+    //         },
+    //         {
+    //             "PLTID": "1007",
+    //             "y": 4,
+    //             "x": 121,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGAB4010318",
+    //             "barcode": "LC001853406"
+    //         },
+    //         {
+    //             "PLTID": "1005",
+    //             "y": 3,
+    //             "x": 117,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGAB4010318",
+    //             "barcode": "LC001853408"
+    //         },
+    //         {
+    //             "PLTID": "1004",
+    //             "y": 3,
+    //             "x": 113,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGAB4010318",
+    //             "barcode": "LC001853409"
+    //         },
+    //         {
+    //             "PLTID": "1003",
+    //             "y": 3,
+    //             "x": 109,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGAB4010318",
+    //             "barcode": "LC001853410"
+    //         },
+    //         {
+    //             "PLTID": "1002",
+    //             "y": 3,
+    //             "x": 105,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGAB4010318",
+    //             "barcode": "LC001853411"
+    //         },
+    //         {
+    //             "PLTID": "1001",
+    //             "y": 3,
+    //             "x": 101,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGAB4010318",
+    //             "barcode": "LC001853412"
+    //         },
+    //         {
+    //             "PLTID": "1044",
+    //             "y": 10,
+    //             "x": 117,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGAB4010318",
+    //             "barcode": "LC001853369"
+    //         },
+    //         {
+    //             "PLTID": "1033",
+    //             "y": 8,
+    //             "x": 113,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGAB4010318",
+    //             "barcode": "LC001853380"
+    //         },
+    //         {
+    //             "PLTID": "1032",
+    //             "y": 8,
+    //             "x": 117,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGAB4010318",
+    //             "barcode": "LC001853381"
+    //         },
+    //         {
+    //             "PLTID": "1028",
+    //             "y": 7,
+    //             "x": 113,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGAB4010318",
+    //             "barcode": "LC001853385"
+    //         },
+    //         {
+    //             "PLTID": "1025",
+    //             "y": 7,
+    //             "x": 101,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGAB4010318",
+    //             "barcode": "LC001853388"
+    //         },
+    //         {
+    //             "PLTID": "1006",
+    //             "y": 3,
+    //             "x": 121,
+    //             "CLR": "#00dcff",
+    //             "CLRFILL": "#FF0000",
+    //             "TID": "24SUBPYGAB4010318",
+    //             "barcode": "LC001853407"
+    //         }
+    //     ]
+    
+    // }
+    // ]
