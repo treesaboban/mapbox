@@ -1,0 +1,112 @@
+PlotData = [
+    {
+     data: [
+          {
+              "167N": {
+                  "abc": [
+                      {
+                          "long": -96.4715980149358,
+                          "lat": 43.62474031159699
+                      },
+                      {
+                          "long": -96.47159720530288,
+                          "lat": 43.62210669225039
+                      },
+                      {
+                          "long": -96.47197566337432,
+                          "lat": 43.62474024970576
+                      }
+                  ],
+                  "nRngs": "24",
+                  "nRows": "40",
+                  "minRng": "1",
+                  "minRow": "209"
+              }
+          }
+      ],
+      plotinfo:[
+        {
+            "PLTID": "2017",
+            "y": 7,
+            "x": 217,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB6314332",
+            "barcode": "LC001703513"
+        },
+        {
+            "PLTID": "2016",
+            "y": 7,
+            "x": 221,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB6314332",
+            "barcode": "LC001703514"
+        },
+        {
+            "PLTID": "2015",
+            "y": 7,
+            "x": 225,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB6314332",
+            "barcode": "LC001703515"
+        },
+        {
+            "PLTID": "2014",
+            "y": 7,
+            "x": 229,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB6314332",
+            "barcode": "LC001703516"
+        },
+        {
+            "PLTID": "2013",
+            "y": 7,
+            "x": 233,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB6314332",
+            "barcode": "LC001703517"
+        },
+        {
+            "PLTID": "1012",
+            "y": 5,
+            "x": 221,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB63C4332",
+            "barcode": "LC001712765"
+        },
+        {
+            "PLTID": "1011",
+            "y": 5,
+            "x": 225,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB63C4332",
+            "barcode": "LC001712766"
+        },
+        {
+            "PLTID": "1010",
+            "y": 5,
+            "x": 229,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB63C4332",
+            "barcode": "LC001712767"
+        },
+        {
+            "PLTID": "1009",
+            "y": 5,
+            "x": 233,
+            "CLR": "#00dcff",
+            "CLRFILL": "#FF0000",
+            "TID": "24SUPPYGAB63C4332",
+            "barcode": "LC001712768"
+        },
+    
+    ]
+}
+  ];
