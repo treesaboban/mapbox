@@ -469,7 +469,7 @@ export class MapCommonComponent implements OnInit {
             type: 'symbol',
             source: 'heading-layer',
             layout: {
-              'text-field': headingText,
+              'text-field': headingText || 'Default Heading',
               'text-size': 16,
               'text-font': ['Open Sans Bold'],
               'text-anchor': 'center', // Center the text
@@ -503,11 +503,100 @@ export class MapCommonComponent implements OnInit {
   }
 
   // highlighting borders
-  highlightCell(cellBounds: [number, number][], highlightId: string) {
+  // highlightCell(cellBounds: [number, number][], highlightId: string) {
+  //   if (this.map?.getSource(highlightId)) {
+  //     this.map?.removeSource(highlightId);
+  //   }
+
+  //   this.map?.addSource(highlightId, {
+  //     type: 'geojson',
+  //     data: {
+  //       type: 'Feature',
+  //       geometry: {
+  //         type: 'Polygon',
+  //         coordinates: [cellBounds],
+  //       },
+  //       properties: {},
+  //     },
+  //   });
+
+  //   if (this.map?.getLayer(`${highlightId}-fill`)) {
+  //     this.map?.removeLayer(`${highlightId}-fill`);
+  //   }
+
+  //   this.map?.addLayer({
+  //     id: `${highlightId}-fill`,
+  //     type: 'fill',
+  //     source: highlightId,
+  //     layout: {},
+  //     paint: {
+  //       'fill-color': '#cceeff',
+  //       'fill-opacity': 0.3,
+  //     },
+  //   });
+
+  //   if (this.map?.getLayer(`${highlightId}-line`)) {
+  //     this.map?.removeLayer(`${highlightId}-line`);
+  //   }
+
+  //   this.map?.addLayer({
+  //     id: `${highlightId}-line`,
+  //     type: 'line',
+  //     source: highlightId,
+  //     layout: {},
+  //     paint: {
+  //       'line-color': '#7ecbf1', 
+  //       'line-width': 2,
+  //     },
+  //   });
+  // }
+  // Adding text to cells
+  addTextToCells(
+    cellCenters: [number, number][], 
+    cellBoundaries: [number, number][][], 
+    polygonCoordinates: [number, number][], 
+  ) {
+    const texts = this.plotdata[0].plotinfo; 
+    let trialId: string;
+  
+    // Determine the key with the highest number of elements
+    let maxEntriesKey = '';
+    let maxEntriesCount = 0;
+  
+    for (const key in this.groupedData) {
+      if (this.groupedData.hasOwnProperty(key)) {
+        const entriesCount = this.groupedData[key].length;
+        if (entriesCount > maxEntriesCount) {
+          maxEntriesCount = entriesCount;
+          maxEntriesKey = key;
+        }
+      }
+    }
+    for (const element of texts) {
+      trialId =
+        element.TID.length > 12
+          ? element.TID.substring(8).slice(0, -4)
+          : element.TID;
+    }
+    console.log(`Key with the highest data: ${maxEntriesKey} with ${maxEntriesCount} entries`);
+  
+    // Highlight cells and add text for each plot
+    texts.forEach((text: { PLTID: string; TID: string }, index: number) => {
+      if (index < cellCenters.length) {
+        const [x, y] = cellCenters[index];
+        const borderWidth = text.TID === maxEntriesKey ? 4 : 1;
+        this.highlightCell(cellBoundaries[index], `highlight-${index}`, borderWidth);
+        this.addTextToMap(x, y, text.PLTID, `text-${index}`, trialId, polygonCoordinates);
+      }
+    });
+  }
+  
+  // Updated highlightCell function to accept borderWidth
+  highlightCell(cellBounds: [number, number][], highlightId: string, borderWidth: number) {
     if (this.map?.getSource(highlightId)) {
       this.map?.removeSource(highlightId);
     }
-
+  
     this.map?.addSource(highlightId, {
       type: 'geojson',
       data: {
@@ -519,11 +608,11 @@ export class MapCommonComponent implements OnInit {
         properties: {},
       },
     });
-
+  
     if (this.map?.getLayer(`${highlightId}-fill`)) {
       this.map?.removeLayer(`${highlightId}-fill`);
     }
-
+  
     this.map?.addLayer({
       id: `${highlightId}-fill`,
       type: 'fill',
@@ -531,52 +620,24 @@ export class MapCommonComponent implements OnInit {
       layout: {},
       paint: {
         'fill-color': '#cceeff',
-        'fill-opacity': 0.3,
+        'fill-opacity': 0.5,
       },
     });
-
+  
     if (this.map?.getLayer(`${highlightId}-line`)) {
       this.map?.removeLayer(`${highlightId}-line`);
     }
-
+  
     this.map?.addLayer({
       id: `${highlightId}-line`,
       type: 'line',
       source: highlightId,
       layout: {},
       paint: {
-        'line-color': '#7ecbf1', 
-        'line-width': 2,
+        'line-color': borderWidth < 4 ? '#00ffff' : '#00b3b3', // Use a default color or pass a color parameter if needed
+        'line-width': borderWidth, // Use the passed border width
       },
     });
   }
-  // Adding text to cells
-  addTextToCells(
-    cellCenters: [number, number][],
-    cellBoundaries: [number, number][][],
-    polygonCoordinates: [number, number][]
-  ) {
-    const texts = this.plotdata[0].plotinfo;
-    let trialId: string;
-    for (const element of texts) {
-      trialId =
-        element.TID.length > 12
-          ? element.TID.substring(8).slice(0, -4)
-          : element.TID;
-    }
-    texts.forEach((text: { PLTID: string }, index: number) => {
-      if (index < cellCenters.length) {
-        const [x, y] = cellCenters[index];
-        this.highlightCell(cellBoundaries[index], `highlight-${index}`);
-        this.addTextToMap(
-          x,
-          y,
-          text.PLTID,
-          `text-${index}`,
-          trialId,
-          polygonCoordinates
-        );
-      }
-    });
-  }
+  
 }
